@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Diem 45p</p> <input type="number" id="tiet">
+<p>Diem giua ki</p> <input type="number" id="giuaKi">
+<p>Diem cuoi ki</p> <input type="number" id="cuoiKi"> <br> <br>
+
+<button type="button" onclick="diemtrungbinh();">Hoc luc: </button>
+<div id="hienthi"></div>
+
+<script>
+    function diemtrungbinh() {
+        var tiet = document.getElementById('tiet').value;
+        var giuaki = document.getElementById('giuaKi').value;
+        var cuoiki = document.getElementById('cuoiKi').value;
+        var a = parseFloat(tiet)
+        var b = parseFloat(giuaki)
+        var c = parseFloat(cuoiki)
+        var tb = (a + b*2 + c*3) / 6;
+        if (tb>=8) {
+            document.getElementById('hienthi').innerHTML = 'Gioi'
+        }
+        else if (tb>=6) {
+            document.getElementById('hienthi').innerHTML = 'Kha'
+        }
+        else  {
+            document.getElementById('hienthi').innerHTML = 'Trung binh'
+        }
+
+    }
+
+
+</script>
+</body>
+</html>
