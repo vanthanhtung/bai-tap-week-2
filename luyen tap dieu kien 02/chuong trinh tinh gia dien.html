@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhap vao so dien: (kWh)</p>
+<input type="number" id = "sodien"> <br> <br>
+<button type="button" onclick="tiendien();"> Tinh tien dien </button>
+
+<script>
+function tiendien() {
+    var tien = 0;
+var abc = parseFloat( document.getElementById('sodien').value);
+
+    if (0<abc <= 50) {
+        tien = abc * 1678;
+        document.write("tien dien la: " + tien + " VND");
+    }
+    else if ( abc <=100) {
+        tien = abc * 1734;
+        document.write("tien dien la: " + tien + " VND");
+    }
+    else if ( abc <=300) {
+        tien = abc * 2536;
+        document.write("tien dien la: " + tien + " VND");
+    }
+    else {
+        tien = abc * 2927;
+        document.write("tien dien la: " + tien + " VND");
+    }
+}
+</script>
+</body>
+</html>

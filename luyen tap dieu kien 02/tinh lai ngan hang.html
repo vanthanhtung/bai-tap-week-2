@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var soTienGui = parseInt(prompt('Nhập vào số tiền bạn gửi (VND)'));
+    var laiSuat = (1.5 / 100)/360;
+    var soNgayGui = prompt('Nhập số ngày gửi')
+    var tienLai = soTienGui * laiSuat * soNgayGui;
+    document.write("Tiền lãi sẽ là: " +tienLai +"VND");
+</script>
+</body>
+</html>

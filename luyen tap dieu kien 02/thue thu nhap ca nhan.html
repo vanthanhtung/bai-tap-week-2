@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var thunhap = parseInt(prompt('Nhập vào tiền lương / tháng (triệu VND)'));
+    var tienthue = 0;
+    if (thunhap <= 5) {
+        tienthue = 0.05*thunhap
+    }
+    else if(thunhap<=10) {
+        tienthue = (thunhap * 0.1) - 0.25;
+    }else if(thunhap<=18) {
+        tienthue = (thunhap * 0.15) - 0.75;
+    }else if(thunhap<=32) {
+        tienthue = (thunhap * 0.2) - 1.65;
+    }
+    else if(thunhap<=52) {
+        tienthue = (thunhap * 0.3) - 3.25;
+    }
+    else {
+        tienthue = (thunhap * 0.35) - 5.85;
+    }
+
+    document.write("Tiền thuế phải nộp là: " + tienthue +" triệu VND");
+</script>
+</body>
+</html>
