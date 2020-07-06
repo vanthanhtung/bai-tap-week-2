@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng good-fast-cheap</title>
+    <link rel="stylesheet" href="Ứng dụng good-fast-cheap.css">
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <label class="switch">
+                <input id="good" type="checkbox" onclick="CheckLap(1)">
+                <span class="slider round"></span>
+            </label>
+        </td>
+        <td style="width: 200px"></td>
+        <td style="text-align: left;width: 200px;height: 100px; font-size: 40px">
+            GOOD
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="switch">
+                <input id="fast" type="checkbox" onclick="CheckLap(2)">
+                <span class="slider round"></span>
+            </label>
+        </td>
+        <td style="width: 200px"></td>
+        <td style="text-align: left;width: 200px;height: 100px; font-size: 40px">
+            CHEAP
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label class="switch">
+                <input id="cheap" type="checkbox" onclick="CheckLap(3)">
+                <span class="slider round"></span>
+            </label>
+        </td>
+        <td style="width: 200px"></td>
+        <td style="text-align: left;width: 200px;height: 100px; font-size: 40px">
+            FAST
+        </td>
+    </tr>
+</table>
+</body>
+</html>
+<script>
+    function CheckLap(type) {
+        good = document.getElementById("good");
+        fast = document.getElementById("fast");
+        cheap = document.getElementById("cheap");
+        if (good.checked == true && fast.checked == true && cheap.checked == true){
+            switch (type) {
+                case 1:
+                    document.getElementById("cheap").checked = false;
+                    break;
+                case 2:
+                    document.getElementById("good").checked = false;
+                    break;
+                case 3:
+                    document.getElementById("fast").checked = false;
+                    break;
+            }
+        }
+
+    }
+</script>
